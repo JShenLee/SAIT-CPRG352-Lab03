@@ -7,9 +7,9 @@
     </head>
     <body>
         <h1>Age Calculator</h1>
-        <form method="post" action="hello">
+        <form method="post" action="">
             <label>Enter your age:</label>
-            <input type="number" name="age" value="${age}">
+            <input type="text" name="age" value="${age}">
             <br><br>     
             <input type="Submit" value="Age next birthday">
             <br>
