@@ -14,10 +14,10 @@ public class AgeCalculatorServlet extends HttpServlet {
         // Get requests end up here!
 
         //This will load a JSP from the servlet.
-        getServletContext().getRequestDispatcher("/WEB-INF/AgeCalculatorForm.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/WEB-INF/agecalculator.jsp").forward(request, response);
         return; //Stops the code call. VERY IMPORTANT.
     }
-
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -34,7 +34,7 @@ public class AgeCalculatorServlet extends HttpServlet {
             String message = "You must give your current age";
 
             request.setAttribute("message", message);
-            getServletContext().getRequestDispatcher("/WEB-INF/AgeCalculatorForm.jsp").forward(request, response);
+            getServletContext().getRequestDispatcher("/WEB-INF/agecalculator.jsp").forward(request, response);
             return; //stop the code call after loading a jsp.
         }
 
@@ -50,7 +50,7 @@ public class AgeCalculatorServlet extends HttpServlet {
             String message = "You must enter a number";
 
             request.setAttribute("message", message);
-            getServletContext().getRequestDispatcher("/WEB-INF/AgeCalculatorForm.jsp").forward(request, response);
+            getServletContext().getRequestDispatcher("/WEB-INF/agecalculator.jsp").forward(request, response);
             return; //stop the code call after loading a jsp.
         }
         
@@ -60,7 +60,7 @@ public class AgeCalculatorServlet extends HttpServlet {
 
         String message = "Your age next birthday will be " + (ageNum + 1);
         request.setAttribute("message", message);
-        getServletContext().getRequestDispatcher("/WEB-INF/AgeCalculatorForm.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/WEB-INF/agecalculator.jsp").forward(request, response);
         return; //stop the code call after loading a jsp.
 
     }
